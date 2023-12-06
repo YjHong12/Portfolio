@@ -1,29 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const [active, setActive] = useState("");
+
+  const handleSetActive = (title) => {
+    const section = document.getElementById(title.toLowerCase());
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="navbar-container">
         <nav className="navbar">
-          <h1 className="navbar-title">Jennifer Hong | Software Engineer</h1>
+          <Link to="/" className="navbar-h1" onClick={() => setActive("")}>
+            <h1>Jennifer Hong | Software Engineer</h1>
+          </Link>
 
           <div className="side-navbar">
             <ul className="nav-links">
               <li>
-                <Link to="/about" className="nav-about">
+                <button
+                  onClick={() => handleSetActive("About")}
+                  className="nav-about"
+                >
                   About
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/projects" className="nav-projects">
+                <button
+                  onClick={() => handleSetActive("Projects")}
+                  className="nav-projects"
+                >
                   Projects
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/contact" className="nav-contact">
+                <button
+                  onClick={() => handleSetActive("Contact")}
+                  className="nav-contact"
+                >
                   Contact
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
