@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
-  const [active, setActive] = useState("");
-
   const handleSetActive = (title) => {
     const section = document.getElementById(title.toLowerCase());
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -15,35 +16,38 @@ function Navbar() {
     <>
       <div className="navbar-container">
         <nav className="navbar">
-          <Link to="/" className="navbar-h1" onClick={() => setActive("")}>
+          <Link to="/" className="nav-h1" onClick={() => handleSetActive("")}>
             <h1>Jennifer Hong | Software Engineer</h1>
           </Link>
 
           <div className="side-navbar">
             <ul className="nav-links">
               <li>
-                <button
-                  onClick={() => handleSetActive("About")}
+                <Link
+                  to="#about"
                   className="nav-about"
+                  onClick={() => handleSetActive("About")}
                 >
                   About
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => handleSetActive("Projects")}
+                <Link
+                  to="#projects"
                   className="nav-projects"
+                  onClick={() => handleSetActive("Projects")}
                 >
                   Projects
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => handleSetActive("Contact")}
+                <Link
+                  to="#contact"
                   className="nav-contact"
+                  onClick={() => handleSetActive("Contact")}
                 >
-                  Contact
-                </button>
+                  About
+                </Link>
               </li>
             </ul>
           </div>
