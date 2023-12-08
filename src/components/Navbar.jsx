@@ -46,7 +46,7 @@ function Navbar() {
                   className="nav-contact"
                   onClick={() => handleSetActive("Contact")}
                 >
-                  About
+                  Contact
                 </Link>
               </li>
             </ul>
