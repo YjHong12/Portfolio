@@ -1,6 +1,4 @@
 import React from "react";
-import { Link, Routes, Route } from "react-router-dom";
-import Resume from "./Resume";
 
 function About() {
   return (
@@ -20,12 +18,6 @@ function About() {
         like JavaScript and explore the depths of React, my aim is to craft not
         just code but elegant solutions that leave an impact.
       </p>
-      <Routes>
-        <Route path="/resume" element={<Resume />} /></Routes>
-          <Link to="/resume" className="resume-page">
-            View Resume
-          </Link>
-      
     </div>
   );
 }

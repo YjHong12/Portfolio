@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Resume from "./Resume";
+import Home from "./Home";
 
 function Navbar() {
   const handleSetActive = (title) => {
@@ -53,6 +56,10 @@ function Navbar() {
           </div>
         </nav>
       </div>
+      <Routes>
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/" element={<Home />} />
+        </Routes>
     </>
   );
 }

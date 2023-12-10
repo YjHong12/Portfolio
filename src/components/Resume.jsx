@@ -11,7 +11,8 @@ function Resume() {
           title="Resume PDF"
           src={resumeURL}
           width="100%"
-          height="500px"
+          height="100%"
+          style={{ border: "none" }}
         ></iframe>
       </div>
     </div>
