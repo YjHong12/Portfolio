@@ -56,10 +56,6 @@ function Navbar() {
           </div>
         </nav>
       </div>
-      <Routes>
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/" element={<Home />} />
-        </Routes>
     </>
   );
 }

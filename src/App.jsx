@@ -10,7 +10,11 @@ import Home from "./components/Home";
 function App() {
   return (
     <>
-      <Navbar /> 
+      <Navbar />
+      <Routes>
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/" element={<Home />} />
+        </Routes> 
     </>
   );
 }

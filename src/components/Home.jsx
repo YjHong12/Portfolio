@@ -8,7 +8,6 @@ import Experience from "./Experience";
 function Home() {
   return (
     <>
-      <Navbar />
       <About />
           <Link to="/resume" className="resume-page">
             View Resume

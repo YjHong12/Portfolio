@@ -6,7 +6,7 @@ function Resume() {
   return (
     <div className="Resume">
       <h2 className="sectionHead">Resume.</h2>
-      <div className="resume-pdf">
+      <div className="resume-pdf" style={{ height: "calc(100vh - 50px)" }}>
         <iframe
           title="Resume PDF"
           src={resumeURL}
